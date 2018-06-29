@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans xmlns="http://www.springframework.org/schema/security"
+		 xmlns:b="http://www.springframework.org/schema/beans"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+	<http >
+		<intercept-url pattern="/statics/**" access="anonymous"/>
+		<intercept-url pattern="/login" access="anonymous"/>
+		<intercept-url pattern="/**" access="authenticated"/>
+		<form-login 
+			login-page="/login"
+			login-processing-url="/login"
+			default-target-url="/"
+			
+			/>
+		<!-- 如果发现/logout不生效，请检查是否为POST提交请求 -->
+		<logout 
+		logout-url="/logout"
+		delete-cookies="JSESSIONID"
+		logout-success-url="/login?logout"
+		invalidate-session="true"
+		/>
+		<http-basic />
+	</http>
+	
+	<authentication-manager >
+		<!-- in-memory UserDetailsService
+		<authentication-provider>
+			<user-service>
+				<user name="jimi" password="jimispassword" authorities="ROLE_USER, ROLE_ADMIN" />
+				<user name="bob" password="bobspassword" authorities="ROLE_USER" />
+			</user-service> 
+		</authentication-provider>
+		-->
+		<authentication-provider ref="daoAuthenticationProvider">
+		</authentication-provider>
+	</authentication-manager>
+	<b:bean id="daoAuthenticationProvider" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+		<b:property name="passwordEncoder" ref="passwordEncoder"></b:property>
+		<b:property name="userDetailsService" ref="jdbcUserDetailService"></b:property>
+	</b:bean>
+	<b:bean id="jdbcUserDetailService" class="com.xbz.ssmframework.login.service.impl.JdbcUserDetailServiceImpl"></b:bean>
+	<b:bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.PlaintextPasswordEncoder"></b:bean>
+</b:beans>
