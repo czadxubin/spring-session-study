@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="com.xbz.ssmframework.core.dao.BaseDaoTest" time="0.16" errors="1" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="D:\Softs\java\1.8\jre\bin"/>
+    <property name="java.vm.version" value="25.171-b11"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\EclipseWorkSpaces\dev_workspace\spring-session-xml"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\EclipseWorkSpaces\dev_workspace\spring-session-xml"/>
+    <property name="java.runtime.version" value="1.8.0_171-b11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="D:\Softs\java\1.8\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\xiaobao\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="E:\EclipseWorkSpaces\dev_workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5925974149259531631.tmp"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\Softs\java\1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/Softs/java/1.8/bin/../jre/bin/server;D:/Softs/java/1.8/bin/../jre/bin;D:/Softs/java/1.8/bin/../jre/lib/amd64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;D:\Softs\java\1.8\bin;D:\Softs\svn\bin;C:\Program Files (x86)\MySQL\MySQL Utilities 1.6\;D:\Softs\erl9_0\bin;;D:\Softs\eclipse;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\xiaobao"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="user.name" value="xiaobao"/>
+    <property name="java.class.path" value="D:\Softs\apache-maven-3.5.3\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="D:\Softs\java\1.8\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -s D:\Softs\apache-maven-3.5.3\conf\settings.xml install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_171"/>
+    <property name="java.ext.dirs" value="D:\Softs\java\1.8\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="D:\Softs\java\1.8\jre\lib\resources.jar;D:\Softs\java\1.8\jre\lib\rt.jar;D:\Softs\java\1.8\jre\lib\sunrsasign.jar;D:\Softs\java\1.8\jre\lib\jsse.jar;D:\Softs\java\1.8\jre\lib\jce.jar;D:\Softs\java\1.8\jre\lib\charsets.jar;D:\Softs\java\1.8\jre\lib\jfr.jar;D:\Softs\java\1.8\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\Softs\apache-maven-3.5.3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.xbz.ssmframework.core.dao.BaseDaoTest" name="testSelectOneByUsername" time="0.16">
+    <error message="
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table &apos;ssm_framwork.user_info&apos; doesn&apos;t exist
+### The error may exist in file [E:\EclipseWorkSpaces\dev_workspace\spring-session-xml\src\main\webapp\WEB-INF\classes\com\xbz\ssmframework\user\mapper\UserInfo-Mapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select * from user_info where username = ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table &apos;ssm_framwork.user_info&apos; doesn&apos;t exist
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table &apos;ssm_framwork.user_info&apos; doesn&apos;t exist" type="org.springframework.jdbc.BadSqlGrammarException">org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table &apos;ssm_framwork.user_info&apos; doesn&apos;t exist
+### The error may exist in file [E:\EclipseWorkSpaces\dev_workspace\spring-session-xml\src\main\webapp\WEB-INF\classes\com\xbz\ssmframework\user\mapper\UserInfo-Mapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select * from user_info where username = ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table &apos;ssm_framwork.user_info&apos; doesn&apos;t exist
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table &apos;ssm_framwork.user_info&apos; doesn&apos;t exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy23.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:166)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:82)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy24.selectOneByUsername(Unknown Source)
+	at com.xbz.ssmframework.core.dao.BaseDaoTest.testSelectOneByUsername(BaseDaoTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table &apos;ssm_framwork.user_info&apos; doesn&apos;t exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:939)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.execute(NewProxyPreparedStatement.java:989)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy32.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 42 more
+</error>
+    <system-out>09:20:34.223 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using &apos;class org.apache.ibatis.logging.slf4j.Slf4jImpl&apos; adapter.
+09:20:34.711 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: &apos;class path resource [config/mybatis/configuration.xml]&apos;
+09:20:34.820 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: &apos;file [E:\EclipseWorkSpaces\dev_workspace\spring-session-xml\src\main\webapp\WEB-INF\classes\com\xbz\ssmframework\user\mapper\UserInfo-Mapper.xml]&apos;
+org.apache.ibatis.binding.MapperProxy@6955cb39
+09:20:35.588 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+09:20:35.594 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5286c33a] was not registered for synchronization because synchronization is not active
+09:20:35.604 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@14d14731] will not be managed by Spring
+09:20:35.612 [main] DEBUG com.xbz.ssmframework.user.mapper.UserInfoMapper.selectOneByUsername - ==&gt;  Preparing: select * from user_info where username = ? 
+09:20:35.646 [main] DEBUG com.xbz.ssmframework.user.mapper.UserInfoMapper.selectOneByUsername - ==&gt; Parameters: 张三(String)
+09:20:35.655 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5286c33a]
+</system-out>
+    <system-err>六月 26, 2018 9:20:32 上午 org.springframework.test.context.support.DefaultTestContextBootstrapper getDefaultTestExecutionListenerClassNames
+信息: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+六月 26, 2018 9:20:32 上午 org.springframework.test.context.support.DefaultTestContextBootstrapper getTestExecutionListeners
+信息: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@8bd1b6a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@18be83e4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@cb5822, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4b9e13df, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2b98378d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@475530b9]
+六月 26, 2018 9:20:32 上午 com.mchange.v2.log.MLog &lt;clinit&gt;
+信息: MLog clients using java 1.4+ standard logging.
+六月 26, 2018 9:20:32 上午 com.mchange.v2.c3p0.C3P0Registry banner
+信息: Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+六月 26, 2018 9:20:32 上午 com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource getPoolManager
+信息: Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -&gt; 3, acquireRetryAttempts -&gt; 30, acquireRetryDelay -&gt; 1000, autoCommitOnClose -&gt; false, automaticTestTable -&gt; null, breakAfterAcquireFailure -&gt; false, checkoutTimeout -&gt; 0, connectionCustomizerClassName -&gt; null, connectionTesterClassName -&gt; com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -&gt; 2tf4m69wg04myd1xay0ig|4e9ba398, debugUnreturnedConnectionStackTraces -&gt; false, description -&gt; null, driverClass -&gt; com.mysql.jdbc.Driver, factoryClassLocation -&gt; null, forceIgnoreUnresolvedTransactions -&gt; false, identityToken -&gt; 2tf4m69wg04myd1xay0ig|4e9ba398, idleConnectionTestPeriod -&gt; 0, initialPoolSize -&gt; 2, jdbcUrl -&gt; jdbc:mysql://localhost:3306/ssm_framwork?useUnicode=true&amp;characterEncoding=UTF-8, maxAdministrativeTaskTime -&gt; 0, maxConnectionAge -&gt; 0, maxIdleTime -&gt; 0, maxIdleTimeExcessConnections -&gt; 0, maxPoolSize -&gt; 5, maxStatements -&gt; 0, maxStatementsPerConnection -&gt; 0, minPoolSize -&gt; 3, numHelperThreads -&gt; 3, numThreadsAwaitingCheckoutDefaultUser -&gt; 0, preferredTestQuery -&gt; null, properties -&gt; {user=******, password=******}, propertyCycle -&gt; 0, testConnectionOnCheckin -&gt; false, testConnectionOnCheckout -&gt; false, unreturnedConnectionTimeout -&gt; 0, usesTraditionalReflectiveProxies -&gt; false ]
+六月 26, 2018 9:20:32 上午 org.springframework.mock.jndi.SimpleNamingContextBuilder bind
+信息: Static JNDI binding: [java:comp/env/MainDataSource] = [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -&gt; 3, acquireRetryAttempts -&gt; 30, acquireRetryDelay -&gt; 1000, autoCommitOnClose -&gt; false, automaticTestTable -&gt; null, breakAfterAcquireFailure -&gt; false, checkoutTimeout -&gt; 0, connectionCustomizerClassName -&gt; null, connectionTesterClassName -&gt; com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -&gt; 2tf4m69wg04myd1xay0ig|4e9ba398, debugUnreturnedConnectionStackTraces -&gt; false, description -&gt; null, driverClass -&gt; com.mysql.jdbc.Driver, factoryClassLocation -&gt; null, forceIgnoreUnresolvedTransactions -&gt; false, identityToken -&gt; 2tf4m69wg04myd1xay0ig|4e9ba398, idleConnectionTestPeriod -&gt; 0, initialPoolSize -&gt; 2, jdbcUrl -&gt; jdbc:mysql://localhost:3306/ssm_framwork?useUnicode=true&amp;characterEncoding=UTF-8, maxAdministrativeTaskTime -&gt; 0, maxConnectionAge -&gt; 0, maxIdleTime -&gt; 0, maxIdleTimeExcessConnections -&gt; 0, maxPoolSize -&gt; 5, maxStatements -&gt; 0, maxStatementsPerConnection -&gt; 0, minPoolSize -&gt; 3, numHelperThreads -&gt; 3, numThreadsAwaitingCheckoutDefaultUser -&gt; 0, preferredTestQuery -&gt; null, properties -&gt; {user=******, password=******}, propertyCycle -&gt; 0, testConnectionOnCheckin -&gt; false, testConnectionOnCheckout -&gt; false, unreturnedConnectionTimeout -&gt; 0, usesTraditionalReflectiveProxies -&gt; false ]]
+六月 26, 2018 9:20:32 上午 org.springframework.mock.jndi.SimpleNamingContextBuilder activate
+信息: Activating simple JNDI environment
+六月 26, 2018 9:20:33 上午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from URL [file:/E:/EclipseWorkSpaces/dev_workspace/spring-session-xml/src/main/webapp/WEB-INF/classes/spring/app-mvc.xml]
+Tue Jun 26 09:20:33 CST 2018 WARN: Establishing SSL connection without server&apos;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&apos;t set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to &apos;false&apos;. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Tue Jun 26 09:20:33 CST 2018 WARN: Establishing SSL connection without server&apos;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&apos;t set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to &apos;false&apos;. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Tue Jun 26 09:20:33 CST 2018 WARN: Establishing SSL connection without server&apos;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&apos;t set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to &apos;false&apos;. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+六月 26, 2018 9:20:33 上午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [spring/application-core.xml]
+六月 26, 2018 9:20:33 上午 org.springframework.context.support.GenericApplicationContext prepareRefresh
+信息: Refreshing org.springframework.context.support.GenericApplicationContext@eb21112: startup date [Tue Jun 26 09:20:33 CST 2018]; root of context hierarchy
+六月 26, 2018 9:20:35 上午 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping registerHandler
+信息: Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+六月 26, 2018 9:20:35 上午 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+信息: Mapped &quot;{[/login]}&quot; onto public java.lang.String com.xbz.ssmframework.login.controller.LoginController.login()
+六月 26, 2018 9:20:35 上午 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+信息: Mapped &quot;{[/home]}&quot; onto public java.lang.String com.xbz.ssmframework.login.controller.LoginController.home()
+六月 26, 2018 9:20:35 上午 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+信息: Mapped &quot;{[/user/list]}&quot; onto public java.lang.String com.xbz.ssmframework.user.controller.UserController.list(javax.servlet.http.HttpServletRequest)
+六月 26, 2018 9:20:35 上午 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+信息: Looking for @ControllerAdvice: org.springframework.context.support.GenericApplicationContext@eb21112: startup date [Tue Jun 26 09:20:33 CST 2018]; root of context hierarchy
+六月 26, 2018 9:20:35 上午 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+信息: Looking for @ControllerAdvice: org.springframework.context.support.GenericApplicationContext@eb21112: startup date [Tue Jun 26 09:20:33 CST 2018]; root of context hierarchy
+六月 26, 2018 9:20:35 上午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+六月 26, 2018 9:20:35 上午 org.springframework.jdbc.support.SQLErrorCodesFactory &lt;init&gt;
+信息: SQLErrorCodes loaded: [DB2, Derby, H2, HDB, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
+</system-err>
+  </testcase>
+</testsuite>

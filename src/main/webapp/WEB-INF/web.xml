@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="ssmframworkApp" version="3.0">
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- Spring 防内存泄漏 -->
+	<listener>
+	<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:/spring/application-*.xml</param-value>
+	</context-param>
+	<!-- 
+		Spring Session 集成Filter
+		The DelegatingFilterProxy will look up a Bean by the name of springSessionRepositoryFilter and cast it to a Filter. For every request that DelegatingFilterProxy is invoked, the springSessionRepositoryFilter will be invoked.
+	 	Spring Security也是利用这个机制
+	 -->
+	<filter>
+		<filter-name>springSessionRepositoryFilter</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSessionRepositoryFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+	</filter-mapping>
+	<!-- Spring Security 
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	-->
+	
+	<servlet>
+		<servlet-name>dispatcherServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:/spring/app-mvc.xml</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dispatcherServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	<!-- 由于jetty中welcome-file-list无效，故将此配置交给mvc -->
+	<welcome-file-list>
+		<welcome-file>home</welcome-file>
+	</welcome-file-list>
+</web-app>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:jee="http://www.springframework.org/schema/jee"
+    
+    
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        
+        http://www.springframework.org/schema/jee 
+        http://www.springframework.org/schema/jee/spring-jee.xsd
+        ">
+        
+<!-- 启动spring-session java configuration 注解扫描已经在application-core.xml中启动 
+<context:annotation-config/> -->
+<bean class="org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration"/>
+<bean id="springSessionRedisSingleton" class="org.springframework.data.redis.connection.RedisStandaloneConfiguration">
+	<property name="hostName" value="127.0.0.1"></property>
+	<property name="port" value="6379"></property>
+	<property name="password" value="#{T(org.springframework.data.redis.connection.RedisPassword).of('redispwd')}"></property>
+</bean>
+
+<bean id="springSessionRedisConnectionFactory" class="org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory">
+	<constructor-arg index="0" ref="springSessionRedisSingleton"></constructor-arg>
+</bean>
+
+
+<bean id="secondUserService" class="com.xbz.ssmframework.user.service.UserService"></bean>
+
+
+</beans>
